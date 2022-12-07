@@ -33,6 +33,13 @@ export class SearchInputComponent implements OnInit {
     })
   }
 
+  /**
+   * get the search text from the ngbtypeahead and pass to the weather service to get the cities according to the term
+   * typeahead act as a observable
+   * when data is not matched, return empty observable
+   * @param text$ 
+   * 
+   */
   search = (text$: Observable<string>) => {
     return text$.pipe(
       debounceTime(300),
@@ -50,6 +57,10 @@ export class SearchInputComponent implements OnInit {
     );
   }
 
+  /**
+   * when select the city in ngbtypeahead get the coordinates and get weather data using get weather data api
+   * @param item
+   */
   selectedItem(item: any) {
     this.clearInput();
     const { latitude } = item.coordinates;
@@ -65,16 +76,22 @@ export class SearchInputComponent implements OnInit {
   }
 
   /**
-* Used to format the result data from the lookup into the
-* display and list values. Maps `{name: "band", id:"id" }` into a string
-*/
+  * Used to format the result data from the lookup into the
+  * display and list values. Maps `{name: "band", id:"id" }` into a string
+   * @param value 
+   * @returns 
+   */
   resultFormatBandListValue(value: any) {
     return value.name;
   }
+
+ 
   /**
-    * Initially binds the string value and then after selecting
-    * an item by checking either for string or key/value object.
-  */
+   * Initially binds the string value and then after selecting
+   * an item by checking either for string or key/value object.
+   * @param value 
+   * @returns 
+   */
   inputFormatBandListValue(value: any) {
     if (value.name)
       return value.name

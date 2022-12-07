@@ -23,7 +23,11 @@ export class WeatherComponent implements OnInit {
       }
     )
   }
-
+  
+  /**
+   * get application background images using weather condition
+   * return class name of the background
+   */
   getAppBackGround() {
     let className = '';
     if (this.weatherData?.current_observation) {
@@ -63,7 +67,6 @@ export class WeatherComponent implements OnInit {
         className = 'default-background'
       }
     }
-
     return className;
   }
 

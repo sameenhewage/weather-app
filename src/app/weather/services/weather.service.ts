@@ -12,20 +12,42 @@ export class WeatherService {
 
   public weatherData = new BehaviorSubject([]);
 
+  /**
+   * set weather data to use after fletch the data as observable
+   * @param data 
+   */
   setWeatherData(data: any) {
     this.weatherData.next(data);
   }
 
+  /**
+   * get weather data using coordinates
+   * this will call outside api service file to call and get the weather data
+   * @param latitude 
+   * @param longitude 
+   * @returns observable weather data
+   */
   getWeatherData(latitude: number, longitude: number) {
     return this._weatherApiService.getWeatherBySelectedCity(latitude, longitude).pipe(
       tap((weatherData: any) => this.weatherData.next(weatherData))
     )
   }
 
+  /**
+   * search cities using term
+   * this will call outside api service file to call and get the city data
+   * @param term 
+   * @returns observable city data
+   */
   searchCities(term: string) {
     return this._weatherApiService.getCitiesBySearchQuery(term);
   }
 
+  /**
+   * weather data has weather code, according to weather codes this will return the weather icon
+   * @param imageCode 
+   * @returns imageLink
+   */
   getWeatherIconsByCode(imageCode: number) {
     let code = imageCode;
     let imageLink = '';
