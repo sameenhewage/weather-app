@@ -1,0 +1,25 @@
+@import "../../../../styles/variables/global";
+
+ul {
+    padding: 0 0 1em 0;
+    margin: 2em 0;
+    li {
+        font-weight: 300;
+        color: $font-color-placeholder;
+        margin: 2em 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .detail-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            img {
+                width: 24px;
+                height: 24px;
+                margin-right: 10px;
+            }
+        }
+    }
+}

@@ -1,1 +1,39 @@
-<p>today-forecast works!</p>
+<ul class="details">
+    <li>
+        <span class="detail-container">
+            <img src="/assets/weather-icons/pressure-high.svg" alt="">
+            <span>Pressure</span>
+        </span>
+        <span>{{weatherData?.current_observation?.atmosphere.pressure}}</span>
+    </li>
+    <li>
+        <span class="detail-container">
+            <img src="/assets/weather-icons/humidity.svg" alt="">
+            <span>Humidity</span>
+        </span>
+        <span>{{weatherData?.current_observation?.atmosphere.humidity}}%</span>
+    </li>
+    <li>
+        <span class="detail-container">
+            <img src="/assets/weather-icons/wind.svg" alt="">
+            <span>Wind</span>
+        </span>
+        <span>{{weatherData?.current_observation?.wind.speed}} km/h</span>
+    </li>
+    <li>
+        <span class="detail-container">
+            <img src="/assets/weather-icons/sunrise.svg" alt="">
+            <span>Sunrise</span>
+        </span>
+        <span>{{weatherData?.current_observation?.astronomy?.sunrise}}</span>
+
+    </li>
+    <li>
+        <span class="detail-container">
+            <img src="/assets/weather-icons/sunset.svg" alt="">
+            <span>Sunset</span>
+        </span>
+        <span>{{weatherData?.current_observation?.astronomy?.sunset}}</span>
+    </li>
+
+</ul>

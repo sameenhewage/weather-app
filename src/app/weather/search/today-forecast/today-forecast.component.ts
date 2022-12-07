@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-today-forecast',
   templateUrl: './today-forecast.component.html',
   styleUrls: ['./today-forecast.component.scss']
 })
-export class TodayForecastComponent implements OnInit {
+export class TodayForecastComponent {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  @Input() weatherData: any = [];
 
 }
