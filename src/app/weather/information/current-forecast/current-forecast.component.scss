@@ -28,4 +28,59 @@
     }
 }
 
+@media screen and (max-width: 800px) {
+    .info-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .image-container {
+            img {
+                width: 165px;
+            }
+        }
+        .information-wrapper {
+            .info-name {
+                font-size: 20px;
+                font-weight: 300;
+            }
+            .city-name {
+                font-size: 46px;
+                font-weight: 300;
+            }
+            .temp {
+                font-size: 60px;
+                font-weight: 700;
+            }
+        }
+    }
+}
 
+@media screen and (max-width: 500px) {
+    .info-wrapper {
+        flex-direction: column;
+        .image-container {
+            img {
+                width: 200px;
+            }
+        }
+        .information-wrapper {
+            padding-left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .info-name {
+                font-size: 20px;
+                font-weight: 300;
+            }
+            .city-name {
+                font-size: 58px;
+                font-weight: 300;
+            }
+            .temp {
+                font-size: 60px;
+                font-weight: 700;
+            }
+        }
+    }
+}

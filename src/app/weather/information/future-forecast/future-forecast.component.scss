@@ -1,5 +1,4 @@
 @import "../../../../styles/variables/global";
-
 .future-forecast {
     width: 100%;
     .future-info-panel {
@@ -34,6 +33,15 @@
                     font-size: 12px;
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .future-forecast {
+        width: 100%;
+        .future-info-panel {
+            width: 100%;
         }
     }
 }

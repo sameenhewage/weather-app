@@ -33,3 +33,76 @@
         padding: 2em 2em 3em 2em;
     }
 }
+
+.cloudy-background-day {
+    background: url("/assets/images/6840626.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.cloudy-background-night {
+    background: url("/assets/images/night.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.thundering-background {
+    background: url("/assets/images/thundering.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.default-background {
+    background: url("/assets/images/default-background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.rain-background {
+    background: url("/assets/images/rain.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.haze-background {
+    background: url("/assets/images/haze.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+@media screen and (max-width: 800px) {
+    .main-container {
+        .weather-info-container-left-panel {
+            position: relative;
+            width: 100%;
+            top: initial;
+            padding: 2em 2em 1em 2em;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .main-container {
+        font-size: 0.75em;
+        .weather-info-container-left-panel {
+            position: relative;
+            width: 100%;
+            top: initial;
+            padding: 0 0 2em 0;
+        }
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .main-container {
+        min-height: 40em;
+    }
+}

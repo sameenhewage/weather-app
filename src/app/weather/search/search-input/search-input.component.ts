@@ -59,6 +59,7 @@ export class SearchInputComponent implements OnInit {
 
   /**
    * when select the city in ngbtypeahead get the coordinates and get weather data using get weather data api
+   * the mainCities filter is get the default cities coordinates and match with the typeahead data, f the result is matched default city will be selected from the list
    * @param item
    */
   selectedItem(item: any) {
