@@ -1,23 +1,21 @@
-<form id="locationInput">
-    <input type="text" name="" id="" class="search" placeholder="search location">
+<ng-template #rt let-r="result" let-t="term">
+    <ngb-highlight [result]="r.name" [term]="t"></ngb-highlight>
+    <div class="customDropdownTemplate">{{r.country.name}}</div>
+    <div class="border-bottom"></div>
+</ng-template>
+
+<form id="locationInput" [formGroup]="citySearchForm">
+    <input id="typeahead-format" type="text" [ngbTypeahead]="search" [resultTemplate]="rt"
+        [resultFormatter]="resultFormatBandListValue" [inputFormatter]="inputFormatBandListValue"
+        formControlName="cityName" [class.is-invalid]="searchFailed" #instance="ngbTypeahead"
+        [class.is-invalid]="searchFailed" (selectItem)="selectedItem($event?.item)" />
+    <small *ngIf="searching" class="form-text text-muted">searching...</small>
+    <div class="invalid-feedback" *ngIf="searchFailed">Sorry, suggestions could not be loaded.</div>
+    <!-- <button type="submit" class="submit">Search</button> -->
 </form>
 <ul class="cities">
-    <li class="city">New York</li>
-    <li class="city">California</li>
-    <li class="city">Paris</li>
-    <li class="city">Tokyo</li>
-</ul>
-<ul class="details">
-    <li>
-        <span>Cloudy</span>
-        <span class="cloud">89%</span>
-    </li>
-    <li>
-        <span>Humidity</span>
-        <span class="humidity">64%</span>
-    </li>
-    <li>
-        <span>Wind</span>
-        <span class="wind">8 km/h</span>
+    <li class="city" *ngFor="let city of mainCities; let i = index" (click)="selectedItem(city)"
+        [ngClass]="{'active': selectedIndex === i}">
+        <span>{{city.cityName}}</span>
     </li>
 </ul>

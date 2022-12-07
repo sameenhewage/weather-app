@@ -1,18 +1,38 @@
+@import "../../../../styles/variables/global";
+
+.customDropdownTemplate {
+    font-size: 12px;
+    font-weight: 700;
+    color: #fa6d1b;
+}
+.border-bottom {
+    border-bottom: 1px $border-bottom-ccc;
+    width: 100%;
+    margin: 5px 0px 2px 0px;
+}
+
 form {
     margin-bottom: 3em;
-    .search {
+
+    #typeahead-format {
         background: none;
         border: none;
-        border-bottom: 1px #ccc solid;
+        border-bottom: 1px $border-bottom-ccc;
         padding: 0 1em 0.5em 0;
-        width: 80%;
-        color: #fff;
+        width: 100%;
+        color: $font-color-white;
         font-size: 1.1em;
         &:focus {
             outline: none;
         }
         &::placeholder {
-            color: #ccc;
+            color: $font-color-placeholder;
+        }
+    }
+    small {
+        display: block;
+        &.text-muted {
+            color: $background-white !important;
         }
     }
     .submit {
@@ -28,29 +48,33 @@ form {
         cursor: pointer;
         font-size: 1.2em;
         &:hover {
-            background: #fff !important;
+            background: $background-white !important;
             color: #000;
         }
     }
 }
 ul {
-    padding: 0 0 1em 0;
-    margin: 2em 0;
-    border-bottom: 1px #ccc solid;
-    h4 {
-        margin: 3em 0;
-    }
-    li {
-        color: #ccc;
+    &.cities {
+        border-bottom: 1px $font-color-placeholder solid;
+        padding: 0 0 1em 0;
         margin: 2em 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        &.city {
-            display: block;
+        li {
+            &.active {
+                background: $active-primary;
+                border: 0px solid $border-list-item-active;
+                color: white;
+                margin-bottom: 5px;
+            }
             cursor: pointer;
-            &:hover {
-                color: #fff;
+            font-weight: 300;
+            color: $font-color-placeholder;
+            padding: 1em 1em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &.city {
+                display: block;
+                cursor: pointer;
             }
         }
     }
