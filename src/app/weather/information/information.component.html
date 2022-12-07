@@ -1,8 +1,8 @@
 <div class="weather-info-container-left-panel">
     <div class="current-weather-forcast">
-        <app-current-forecast></app-current-forecast>
+        <app-current-forecast [weatherData]="weatherData" [imageLink]="imageLink"></app-current-forecast>
     </div>
     <div class="future-weather-forcast">
-        <!-- <app-future-forcast [futureWeatherData]="weatherData"></app-future-forcast> -->
+        <app-future-forecast [futureWeatherData]="weatherData"></app-future-forecast>
     </div>
 </div>

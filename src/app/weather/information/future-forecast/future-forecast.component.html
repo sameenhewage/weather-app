@@ -1,1 +1,13 @@
-<p>future-forecast works!</p>
+<div class="future-forecast">
+    <div class="future-info-panel">
+        <div class="weather-forecast">
+            <div class="weather-forecast-item" *ngFor="let item of futureWeatherData['forecasts']; let i = index">
+                <div class="day">{{item?.day}}</div>
+                <img [src]=getImageLink(item?.code) alt="" class="w-icon">
+                <div class="temp">{{item?.high}}&#176; C</div>
+                <div class="temp">{{item?.low}}&#176; C</div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,39 @@
+@import "../../../../styles/variables/global";
+
+.future-forecast {
+    width: 100%;
+    .future-info-panel {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 60%;
+        margin-top: 25px;
+        overflow-y: auto;
+        .weather-forecast {
+            display: flex;
+            margin-bottom: 25px;
+            .weather-forecast-item {
+                width: 130px;
+                background: $background-color-black;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: 0 10px;
+                border: 1px solid $border-light;
+                border-radius: 10px;
+                padding: 15px;
+                .day {
+                    padding: 5px 15px;
+                    background: $background-gray;
+                    border-radius: 50px;
+                    text-align: center;
+                }
+                .temp {
+                    font-weight: 100;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

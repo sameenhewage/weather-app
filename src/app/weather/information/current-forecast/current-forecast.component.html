@@ -1,16 +1,17 @@
 <div class="info-wrapper">
     <div class="image-container">
-        <img src="/assets/weather-icons/haze.svg">
+        <img [src]=imageLink [alt]="weatherData?.current_observation?.condition?.text"
+            [title]="weatherData?.current_observation?.condition?.text">
     </div>
     <div class="information-wrapper">
         <div class="info-name">
-            Haze
+            {{weatherData?.current_observation?.condition?.text}}
         </div>
         <div class="city-name">
-            London
+            {{weatherData?.location?.city}}
         </div>
         <div class="temp">
-            12&#176; C
+            {{weatherData?.current_observation?.condition?.temperature}}&#176; C
         </div>
     </div>
 </div>
