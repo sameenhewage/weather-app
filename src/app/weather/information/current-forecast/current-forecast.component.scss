@@ -1,0 +1,27 @@
+.info-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 60%;
+    .image-container {
+        max-width: 100%;
+        img {
+            width: 140px;
+        }
+    }
+    .information-wrapper {
+        padding-left: 20px;
+        .info-name {
+            font-size: 36px;
+            font-weight: 300;
+        }
+        .city-name {
+            font-size: 18px;
+            font-weight: 300;
+        }
+        .temp {
+            font-size: 50px;
+            font-weight: 700;
+        }
+    }
+}

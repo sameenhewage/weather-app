@@ -1,0 +1,16 @@
+@import "../../../styles/variables/global";
+
+.panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 40%;
+    background: $panel-background;
+    box-shadow: 0 8px 32px 0 $background-color-black;
+    backdrop-filter: blur(8px);
+    border: 1pz solid $border-gray-transparent;
+    z-index: 1;
+    padding: 3em 2em;
+    overflow-y: auto;
+}
