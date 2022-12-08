@@ -1,4 +1,4 @@
-# Angular Weather app with Yahoo API
+# Angular Weather app with Spott and Yahoo API
 This codebase was created to demonstrate a  Weather application built with Angular 13 that interacts with an actual backend server using Yahoo API
 
 ### Get started
