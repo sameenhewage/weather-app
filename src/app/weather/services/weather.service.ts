@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, of, tap } from 'rxjs';
 import { WeatherApiService } from 'src/services/weather-api.service';
+import { iWeatherData } from '../models/weather';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ export class WeatherService {
 
   constructor(private _weatherApiService: WeatherApiService) { }
 
-  public weatherData = new BehaviorSubject([]);
+  public weatherData = new BehaviorSubject<iWeatherData>({} as iWeatherData);
 
   /**
    * set weather data to use after fletch the data as observable

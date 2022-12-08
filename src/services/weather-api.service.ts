@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { of } from 'rxjs';
+import { iWeatherData } from 'src/app/weather/models/weather';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -58,6 +59,6 @@ export class WeatherApiService {
         }
       }
     );
-    return this.http.get<[any, string[]]>(url, { ...this.httpOptions_Weather, params: params });
+    return this.http.get<iWeatherData>(url, { ...this.httpOptions_Weather, params: params });
   }
 }
