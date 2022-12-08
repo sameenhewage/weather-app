@@ -51,4 +51,4 @@ This project is based on City API and Yahoo weather api
 
 
 ## Web App documentation
-`https://docs.google.com/document/d/1AwDem8-ONab5yD2tU8bsevFPVPFi-qKsb20JOa9at6E/edit`
+`https://docs.google.com/document/d/1AwDem8-ONab5yD2tU8bsevFPVPFi-qKsb20JOa9at6E/edit?usp=sharing`
