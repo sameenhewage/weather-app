@@ -29,8 +29,8 @@
                     text-align: center;
                 }
                 .temp {
-                    font-weight: 100;
-                    font-size: 12px;
+                    font-weight: 300;
+                    font-size: $font-size-0-75;
                 }
             }
         }
@@ -42,6 +42,21 @@
         width: 100%;
         .future-info-panel {
             width: 100%;
+        }
+    }
+}
+@media screen and (max-width: 800px) {
+    .future-forecast {
+        .future-info-panel {
+            .weather-forecast {
+                .weather-forecast-item {
+                    .day {
+                    }
+                    .temp {
+                        font-size: $font-size-1;
+                    }
+                }
+            }
         }
     }
 }

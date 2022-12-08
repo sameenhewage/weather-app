@@ -1,9 +1,8 @@
 @import "../../../../styles/variables/global";
 
 .customDropdownTemplate {
-    font-size: 12px;
+    font-size: $font-size-0-75;
     font-weight: 700;
-    color: #fa6d1b;
 }
 .border-bottom {
     border-bottom: 1px $border-bottom-ccc;
