@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { iWeatherData } from './models/weather';
 import { WeatherService } from './services/weather.service';
 
 @Component({
@@ -8,14 +9,14 @@ import { WeatherService } from './services/weather.service';
 })
 export class WeatherComponent implements OnInit {
 
-  weatherData: any;
+  weatherData!: iWeatherData;
 
   constructor(private _weatherService: WeatherService) { }
 
   ngOnInit(): void {
     this._weatherService.weatherData.subscribe(
       {
-        next: ((res: any) => {
+        next: ((res: iWeatherData) => {
           this.weatherData = res;
         }),
         error: (err) => console.log("error", err),
@@ -23,7 +24,7 @@ export class WeatherComponent implements OnInit {
       }
     )
   }
-  
+
   /**
    * get application background images using weather condition
    * return class name of the background
@@ -69,5 +70,5 @@ export class WeatherComponent implements OnInit {
     }
     return className;
   }
-
 }
+
