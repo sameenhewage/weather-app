@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, of, tap } from 'rxjs';
+import { BehaviorSubject, catchError, of, tap } from 'rxjs';
 import { WeatherApiService } from 'src/services/weather-api.service';
 import { iWeatherData } from '../models/weather';
 
@@ -30,7 +30,14 @@ export class WeatherService {
    */
   getWeatherData(latitude: number, longitude: number) {
     return this._weatherApiService.getWeatherBySelectedCity(latitude, longitude).pipe(
-      tap((weatherData: any) => this.weatherData.next(weatherData))
+      tap((weatherData: any) => this.weatherData.next(weatherData)),
+      catchError(error => {
+        window.confirm(error.error.message);
+        if (confirm("Click ok to reload page")) {
+          window.location.reload();
+        } 
+        return of([]);
+      })
     )
   }
 
